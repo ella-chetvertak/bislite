@@ -37,14 +37,21 @@ ul {
 }
 
 .header-links {
-	width: 661px;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 }
 
 .header-item {
 	position: relative;
+	margin-right: 50px;
+}
+
+.header-item:last-of-type {
+	margin-right: 0;
+}
+
+.dropdown-item {
+	margin-right: 35px;
 }
 
 .header-item:hover {
@@ -60,7 +67,7 @@ ul {
 
 .header-items-dropdown {
 	border-bottom: 5px solid #2aacc8;
-	padding: 22px 5px;
+	padding: 22px 5px 0;
 	position: absolute;
   	top: 26px;
   	left: 0;
@@ -78,10 +85,6 @@ ul {
 	display: block;
 }
 
-.header-item-link:nth-child(3) {
-	color: rgb(42, 172, 200);
-}
-
 .down-arrow::after {
 	content: ' ';
 	display: inline-block;
@@ -92,7 +95,7 @@ ul {
 }
 
 .dropdown-link {
-	padding-left: 11px;
+	padding:0 0 12px 11px;
 	border-bottom: 1px solid #e7e7e7;
 	text-decoration: none;
 	color: #000000;
@@ -101,12 +104,20 @@ ul {
 	margin: 13px 0 12px;
 }
 
-.header-items-dropdown:first-child {
-	margin-top: none;
+.dropdown-link:hover {
+	color: rgb(42, 172, 200);
 }
 
-.header-items-dropdown:nth-child(3) {
-	color: rgb(42, 172, 200);
+.header-items-dropdown li .dropdown-link:first-of-type {
+	margin-top: 0;
+}
+
+.last-link {
+	border-bottom: none;
+}
+
+.header-items-dropdown:first-child {
+	margin-top: none;
 }
 
 .slider-wrapper {
@@ -141,7 +152,7 @@ ul {
 
 .slick-dots li {
 	position: relative;
-	bottom: 6px;
+	bottom: 2px;
 	margin: 0 9px 14px;
 }
 
@@ -179,6 +190,8 @@ ul {
 	align-items: center;
 	flex-direction: row;
 	margin-bottom: 22px;
+	text-transform: uppercase;
+	font-size: 15px;
 }
 
 [class^="icon-"] {
@@ -192,11 +205,6 @@ ul {
 	align-items: center;
 }
 
-.heading {
-	text-transform: uppercase;
-	font-size: 15px;
-}
-
 .info {
 	margin-bottom: 27px;
 	line-height: 20px;
@@ -207,6 +215,10 @@ ul {
 	text-decoration: none;
 	color: rgb(42, 172, 200);
 	font-size: 15px;
+}
+
+.link:hover {
+	text-decoration: underline;
 }
 
 .link::before {
@@ -228,7 +240,6 @@ ul {
 .download-internal-wrapper {
 	width: 999px;
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	background-color: #e8fcfe;
@@ -255,6 +266,11 @@ ul {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 18px;
+	cursor: pointer;
+}
+
+.download-button:hover {
+	background-image: linear-gradient(0deg, #81e3ed 0%, #71d9e5 15%, #5fcddd 50%, #29abc7 100%);
 }
 
 .button-text-wrapper {
@@ -287,4 +303,8 @@ ul {
 	font-size: 13px;
 	line-height: 18px;
 	color: #363636;
+}
+
+.main-icon:hover {
+	opacity: .75;
 }
